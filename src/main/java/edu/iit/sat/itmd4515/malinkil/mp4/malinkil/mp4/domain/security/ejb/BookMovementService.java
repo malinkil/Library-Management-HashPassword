@@ -16,12 +16,12 @@ import javax.persistence.PersistenceContext;
  * @author mithun.alinkil
  */
 @Stateless
-public class BookMovementBean {
+public class BookMovementService {
     
     @PersistenceContext(unitName = "malinkilPU")
     private EntityManager em;
     
-    public BookMovementBean(){
+    public BookMovementService(){
         
     }
     
