@@ -10,7 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
- *
+ * This is embeddable class and is re used by customers and vendor
  * @author mithun.alinkil
  */
 @Embeddable

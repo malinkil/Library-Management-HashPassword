@@ -20,9 +20,9 @@ import javax.ejb.Startup;
  */
 @Singleton
 @Startup
-public class DatabaseBean {
+public class DatabasePopulator {
     
-    public DatabaseBean(){
+    public DatabasePopulator(){
         
     }
     

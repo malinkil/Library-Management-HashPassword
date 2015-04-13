@@ -15,14 +15,18 @@ and open the template in the editor.
             <h2>Welcome to Library Management System</h2>
             <form method="post" action="j_security_check">
                 
-                
-                <span>UserName:  <input type="text" name="j_username"/></span><br><br>
-                <span>Password:  <input type="password" name="j_password"/></span><br><br>
-                
-                
+            <fieldset>
+                <div>
+                    <label for="j_username">Username:</label>
+                    <input type="text" id="j_username" name="j_username" />
+                </div>
+                <div>
+                    <label for="j_password">Password:</label>
+                    <input type="password" id="j_password" name="j_password" />
+                </div>
                 <input type="submit" value="Submit"/>
                 <input type="reset" value="Reset"/>
-                
+            </fieldset>                
             </form>
         </div>
     </body>
