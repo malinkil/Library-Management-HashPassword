@@ -5,7 +5,7 @@
  */
 package edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.ejb;
 
-import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.UserEntity;
+import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.entity.StockOrder;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -16,21 +16,20 @@ import javax.persistence.PersistenceContext;
  * @author mithun.alinkil
  */
 @Stateless
-public class UserBean extends AbstractBean<UserEntity> {
+public class StockOrderService {
     
     @PersistenceContext(unitName = "malinkilPU")
     private EntityManager em;
     
-    public UserBean(){
-        super(UserEntity.class);
+    public StockOrderService(){
+        
     }
     
-    @Override
-    public List<UserEntity> findAll(){
-        return getEntityManager().createNamedQuery("UserEntity.findAll", UserEntity.class).getResultList();
+    public void create(StockOrder s){
+        em.persist(s);
     }
     
-    public UserEntity findByUsername(String userName){
-        return em.createNamedQuery("UserEntity.findByUserName", UserEntity.class).setParameter("userName", userName).getSingleResult();
+    public List<StockOrder> findAll(String vendorId){
+        return em.createNamedQuery("StockOrder.findAll", StockOrder.class).setParameter("vendorId", vendorId).getResultList();
     }
 }
