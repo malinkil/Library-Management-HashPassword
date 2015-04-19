@@ -27,13 +27,13 @@ public class DatabasePopulator {
     }
     
     @EJB
-    private UserService userBean;
+    private UserBean userBean;
     
     @EJB
-    private BookMovementService booksBean;
+    private BookMovementBean booksBean;
     
     @EJB
-    private StockOrderService stockBean;
+    private StockOrderBean stockBean;
     
     @PostConstruct
     private void populateDatabase(){

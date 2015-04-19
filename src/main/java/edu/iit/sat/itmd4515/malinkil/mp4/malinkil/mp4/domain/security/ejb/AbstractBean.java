@@ -13,14 +13,14 @@ import javax.persistence.PersistenceContext;
  *
  * @author mithun.alinkil
  */
-public abstract class AbstractService<T> {
+public abstract class AbstractBean<T> {
     
     @PersistenceContext(unitName = "malinkilPU")
     EntityManager em;
     
     private final Class<T> entityClass;
     
-    protected AbstractService(Class entityClass){
+    protected AbstractBean(Class entityClass){
         this.entityClass = entityClass;
     }
     

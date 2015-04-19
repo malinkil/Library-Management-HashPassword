@@ -8,9 +8,9 @@ package edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.servlet;
 import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.entity.BookMovementDetailsNew;
 import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.entity.StockOrder;
 import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.UserEntity;
-import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.ejb.BookMovementService;
-import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.ejb.StockOrderService;
-import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.ejb.UserService;
+import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.ejb.BookMovementBean;
+import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.ejb.StockOrderBean;
+import edu.iit.sat.itmd4515.malinkil.mp4.malinkil.mp4.domain.security.ejb.UserBean;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -29,13 +29,13 @@ import javax.servlet.http.HttpServletResponse;
 public class SecurityServlet extends HttpServlet {
 
      @EJB
-    private UserService userBean;
+    private UserBean userBean;
     
     @EJB
-    private BookMovementService booksBean;
+    private BookMovementBean booksBean;
     
     @EJB
-    private StockOrderService stockBean;
+    private StockOrderBean stockBean;
     
     
     /**
